@@ -1,0 +1,3 @@
+Express - Frame NodeJs para aplicações web
+EJS - Uma linguagem de modelagem para criação de páginas HTML utilizando JS
+Nodemon - Utilitario que reinicia automaticamente o servidor NodeJS caso detecte alguma mudança nos scrips
