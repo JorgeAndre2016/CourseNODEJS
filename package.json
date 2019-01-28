@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/JorgeAndre2016/CourseNODEJS/issues"
   },
-  "homepage": "https://github.com/JorgeAndre2016/CourseNODEJS#readme"
+  "homepage": "https://github.com/JorgeAndre2016/CourseNODEJS#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
