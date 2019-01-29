@@ -1,3 +1,13 @@
 Express - Frame NodeJs para aplicações web
 EJS - Uma linguagem de modelagem para criação de páginas HTML utilizando JS
 Nodemon - Utilitario que reinicia automaticamente o servidor NodeJS caso detecte alguma mudança nos scrips
+
+Instalando modulo de conexão mysql
+npm install mysql --save
+
+Executando
+services.msc
+MySql57 Start
+
+Acessar MtSql
+mysql -u root -p - usuário (-u) e senha (-p)
