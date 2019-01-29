@@ -1,5 +1,5 @@
 
 module.exports = function() {
-    var msg = "Este módulo contém apenas uma string";
+    var msg = "Retorno de uma string via modulo";
     return msg;
-} // export information
+}
