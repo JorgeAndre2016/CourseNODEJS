@@ -1,11 +1,10 @@
-var dbConnection = require('../../config/dbConnections');
+// var dbConnection = require('../../config/dbConnections');
 
-module.exports = function (app) {
+module.exports = function(app) {
 
     app.get('/noticias', function (req, res) {
-
-        var connection = dbConnection();
-
+        
+        var connection = app.config.dbConnections();
         {/* 2 parâmetros do método query
             sql - consulta em si, 
             função de callback - é o que será feito após a consulta ser realizada */}
