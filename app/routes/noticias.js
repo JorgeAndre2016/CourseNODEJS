@@ -1,16 +1,16 @@
 // var dbConnection = require('../../config/dbConnections');
 
-module.exports = function(app) {
+module.exports = function (application) {
 
-    app.get('/noticias', function (req, res) {
-        
-        var connection = app.config.dbConnections();
-        {/* 2 parâmetros do método query
-            sql - consulta em si, 
-            função de callback - é o que será feito após a consulta ser realizada */}
-        connection.query('select * from noticias', function (erro, result) {
-            res.render('noticias/noticias', { noticias: result });
+    application.get('/noticias', function (req, res) {
+
+        var connection = application.config.dbConnections();
+        var noticiasModel = application.app.models.noticiasModel; // acessando modulo
+
+        noticiasModel.getNoticias(connection, function (erro, result) {
+            res.render('noticias/noticias', { noticias: result })
         });
 
+        connection.end(function(err) { console.log('Conexão com bd foi encerrada'); })
     });
 }
