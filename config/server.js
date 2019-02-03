@@ -7,6 +7,7 @@ var app = express(); // excutando função que modulo retorna
 app.set('view engine', 'ejs'); // engine de view do express agora é o EJS
 app.set('views', './app/views'); // definindo diretório das views
 
+app.use(express.static('./app/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(expressValidator()); // inserindo middleware na aplicação
 consign()
