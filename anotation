@@ -3,6 +3,7 @@ EJS - Uma linguagem de modelagem para criação de páginas HTML utilizando JS
 Nodemon - Utilitario que reinicia automaticamente o servidor NodeJS caso detecte alguma mudança nos scrips
 Consign - cria as rotas automáticamente 
 Body-parser - 
+Express-validator - usado para validações em formulários
 
 Instalando modulo de conexão mysql
 npm install mysql --save
