@@ -7,9 +7,9 @@ module.exports = function (application) {
         var noticia = req.body; // express só preenche se estiver inserido o módulo body-parser
         
         var connection = application.config.dbConnections();
-        var noticiasModel = application.app.models.noticiasModel; // acessando modulo
+        var noticiaDao = new application.app.models.NoticiasDAO(connection); // acessando modulo
 
-        noticiasModel.salvarNoticias(noticia, connection, function (erro, result) {
+        noticiaDao.salvarNoticias(noticia, function (erro, result) {
             res.redirect('/noticias')
         });
 
