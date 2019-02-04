@@ -1,0 +1,6 @@
+1ª criar diretórios 
+c:\data\db
+
+2ª executar mongod.exe
+
+3ª executar mongo.exe para acessar banco
