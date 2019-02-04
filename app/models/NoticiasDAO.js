@@ -10,12 +10,17 @@ NoticiasDAO.prototype.getNoticias = function(callback){
 }
 
 NoticiasDAO.prototype.getNoticia = function(callback) {
-    this._connection.query('select * from noticias where id_noticia = 9', callback);
+    this._connection.query('select * from noticias where id_noticia = 17', callback);
 }
 
 NoticiasDAO.prototype.salvarNoticias = function(noticia, callback) {
     this._connection.query('insert into noticias set ?', noticia, callback);
 }
+
+NoticiasDAO.prototype.get5UltimasNoticias = function(callback) {
+    this._connection.query('select * from noticias order by data_criacao desc limit 5', callback);
+}
+
 
 module.exports = function () {
     return NoticiasDAO;
