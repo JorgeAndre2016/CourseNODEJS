@@ -1,6 +1,61 @@
-1ª criar diretórios 
-c:\data\db
-
+1ª criar diretórios c:\data\db
 2ª executar mongod.exe
-
 3ª executar mongo.exe para acessar banco
+
+show dbs - listar bancos
+use - setar banco ou criar estrutura inícial (banco só é criando de fato quando existir algum dado)
+db.dropDatabase(); - excluir dando
+
+criando uma colllection
+db.createCollection('name collection)
+
+listando collections
+db.getCollectionNames()
+
+apagando collection
+db.cursos.drop()
+
+inserir documentos
+db.aluno.save({nome: 'jorge'})
+
+/*******  consultas  *******/
+findOne() - traz o último documento 
+db.aluno.findOne();
+
+find() - traz todos documentos da collection
+db.aluno.find();
+
+pretty() - realiza a indentação do json 
+db.aluno.find().pretty()
+
+consulta com operador
+db.aluno.find({nome: {$eq: 'Jorge'}})
+
+consulta com operador lógico (AND)
+db.aluno.find({
+        nome: {$eq: 'Jorge'},
+        idade: ${$lt: 30}
+    }
+)
+
+consulta com operador lógico (OR)
+db.aluno.find({
+        $or: [
+            {nome:{$eq:'Jorge'}},
+            {nome:{$eq:'Carlos'}}
+        ]
+    }
+)
+
+Operadores de comparação
+---------------------------------------------------------------------------------------------
+| Operadores SQL     | Operador MongoDB     | Nome                  | Operação              |
+---------------------------------------------------------------------------------------------
+| =                  | $eq                  | Equals                | É igual a             |
+| >                  | $gt                  | Greater Than          | É maior que           |
+| >=                 | $gte                 | Greater Than or Equal | É maior ou igual a    |
+| <                  | $lt                  | Less Than             | É menor que           |
+| <=                 | $ltr                 | Less Than or Equal    | É menor ou igual a    |
+| != / <>            | $ne                  | Not Equal             | É diferente de        |
+---------------------------------------------------------------------------------------------
+
