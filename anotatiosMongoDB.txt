@@ -50,10 +50,17 @@ db.aluno.find({
 /*******  ATUALIZAÇÕES  *******/
 atualizando collections
 update({condições para atualizar}, {$set campos que iram ser atualizados}, {multi:false (atualiza o primeiro apenas ou true atualiza tudo)})
+db.alunos.update({ nome: 'Fernanda'}, {$set: {idade: 31}}, {multi: true})
 
 save(
     _id: xxxxx
 ) - também atualiza - remove e substitui tudo caso encontre o id ou inclui um novo 
+
+/*******  EXCLUSÕES  *******/
+removendo collections
+remove({criterios}, true (justone se igual false será apagado tudo que atender as condições))
+
+db.alunos.remove({nome: 'Fernanda', idade: {$gt: 32}})
 
 Operadores de comparação
 ---------------------------------------------------------------------------------------------
@@ -66,4 +73,3 @@ Operadores de comparação
 | <=                 | $ltr                 | Less Than or Equal    | É menor ou igual a    |
 | != / <>            | $ne                  | Not Equal             | É diferente de        |
 ---------------------------------------------------------------------------------------------
-
