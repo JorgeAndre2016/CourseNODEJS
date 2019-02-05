@@ -18,7 +18,7 @@ db.cursos.drop()
 inserir documentos
 db.aluno.save({nome: 'jorge'})
 
-/*******  consultas  *******/
+/*******  CONSULTAS  *******/
 findOne() - traz o último documento 
 db.aluno.findOne();
 
@@ -46,6 +46,14 @@ db.aluno.find({
         ]
     }
 )
+
+/*******  ATUALIZAÇÕES  *******/
+atualizando collections
+update({condições para atualizar}, {$set campos que iram ser atualizados}, {multi:false (atualiza o primeiro apenas ou true atualiza tudo)})
+
+save(
+    _id: xxxxx
+) - também atualiza - remove e substitui tudo caso encontre o id ou inclui um novo 
 
 Operadores de comparação
 ---------------------------------------------------------------------------------------------
