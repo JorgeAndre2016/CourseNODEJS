@@ -14,3 +14,5 @@ MySql57 Start
 
 Acessar MtSql
 mysql -u root -p - usuário (-u) e senha (-p)
+
+npm install mongodb --save
